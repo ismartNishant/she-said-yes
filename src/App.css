@@ -1,0 +1,123 @@
+
+  
+  #noButton {
+    position: absolute;
+    margin-left: 150px;
+    transition: 0.5s;
+    margin-top: 30px;
+  }
+  
+  #yesButton {
+    position: absolute;
+    margin-right: 150px;
+    margin-top: 30px;
+  }
+  
+  .box{
+    top:calc(50% - 10vmin);
+    left:calc(50% - 10vmin);
+    width:20vmin;
+    height: 20vmin;
+    position: absolute;
+    background-color: var(--pink);
+    background-image: radial-gradient(
+        circle at 50% 10%,
+        var(--blue) 5%,
+        transparent 80%
+    ),
+    radial-gradient( circle at 50% 90%, var(--red) 25%,transparent);
+    border-radius: 3vmin;
+    box-shadow: 0 0 6vmin var(--shadow);
+    animation: boxMove 2s linear infinite;
+
+}
+@keyframes boxMove{
+    0%{
+        transform: scale(var(--initialScale)) rotate(var(--initialAngle));
+    }
+    100%{
+        transform: scale(var(--endScale)) rotate(var(--endAngle));
+    }
+}
+.box0{
+    --initialScale:0.3;
+    --endScale:1;
+    --initialAngle:+10deg;
+    --endAngle:+00deg;
+}
+.box1{
+    --initialScale:1;
+    --endScale:1.5;
+    --initialAngle:+0deg;
+    --endAngle:-10deg;
+}
+.box2{
+    --initialScale:1.5;
+    --endScale:2;
+    --initialAngle:-10deg;
+    --endAngle:-20deg;
+}
+.box3{
+    --initialScale:2;
+    --endScale:3;
+    --initialAngle:-20deg;
+    --endAngle:-25deg;
+}
+.box4{
+    --initialScale:3;
+    --endScale:4;
+    --initialAngle:-25deg;
+    --endAngle:-30deg;
+}
+.box5{
+    --initialScale:4;
+    --endScale:5;
+    --initialAngle:-30deg;
+    --endAngle:-40deg;
+}
+.box6{
+    --initialScale:5;
+    --endScale:6.5;
+    --initialAngle:-40deg;
+    --endAngle:-50deg;
+}
+.box7{
+    --initialScale:6.5;
+    --endScale:8;
+    --initialAngle:-50deg;
+    --endAngle:-60deg;
+}
+.box8{
+    --initialScale:8;
+    --endScale:10;
+    --initialAngle:-60deg;
+    --endAngle:-70deg;
+}
+.box9{
+    --initialScale:10;
+    --endScale:14;
+    --initialAngle:-70deg;
+    --endAngle:-85deg;
+}
+.box10{
+    --initialScale:14;
+    --endScale:20;
+    --initialAngle:-85deg;
+    --endAngle:-99deg;
+}
+@keyframes show{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+     }
+}
+.box0{
+    animation:boxMove 4s linear infinite, show 4 linear infinite;
+
+}
+
+
+
+  
